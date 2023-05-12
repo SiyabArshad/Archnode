@@ -1,12 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import * as Font from "expo-font";
+import { LogBox } from 'react-native';
+//screen and components import
+import Loading from './src/components/Loading';
+import RolesScreen from './src/screens/OnBoardingScreens/RolesScreen';
+import OnBoarding from "./src/screens/OnBoardingScreens/OnBoarding"
+import SignupScreen from './src/screens/authScreens/Signup';
+import SigninScreen from './src/screens/authScreens/SignIn';
+import ForgotPasswordScreen from './src/screens/authScreens/ForgotPassword';
+//other imports
 export default function App() {
+  LogBox.ignoreAllLogs()
+  const [fontsLoaded, error] = Font.useFonts({
+    'Montserrat-Black': require('./assets/fonts/Montserrat-Black.ttf'),
+    'Montserrat-Bold': require('./assets/fonts/Montserrat-Bold.ttf'),
+    'Montserrat-ExtraBold': require('./assets/fonts/Montserrat-ExtraBold.ttf'),
+    'Montserrat-Italic': require('./assets/fonts/Montserrat-Italic.ttf'),
+    'Montserrat-Light': require('./assets/fonts/Montserrat-Light.ttf'),
+    'Montserrat-Medium': require('./assets/fonts/Montserrat-Medium.ttf'),
+    'Montserrat-Regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+    'Montserrat-SemiBold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+    'Montserrat-Thin': require('./assets/fonts/Montserrat-Thin.ttf'),
+  });
+  if(!fontsLoaded)
+  {
+    return <Loading visible={true}/>
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ForgotPasswordScreen/>
   );
 }
 
