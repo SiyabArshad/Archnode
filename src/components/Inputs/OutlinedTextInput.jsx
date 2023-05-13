@@ -6,7 +6,7 @@ import ButtonText from '../Typography/ButtonText'
 import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fontsize";
 import { TextInput,DefaultTheme } from 'react-native-paper';
 
-export default function OutlinedTextInput({lable="Name",placeholder="Your Name",changefunc=()=>{},val="",style}) {
+export default function OutlinedTextInput({lable="Name",placeholder="Your Name",changefunc=()=>{},val="",style,multipleline=false}) {
     const theme = {
         ...DefaultTheme,
         colors: {
@@ -17,6 +17,7 @@ export default function OutlinedTextInput({lable="Name",placeholder="Your Name",
       };
     return (
         <TextInput 
+         multiline={multipleline}
         outlineColor={colors.brown}
         onChangeText={(e)=>changefunc(e)}
           value={val}

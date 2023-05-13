@@ -20,6 +20,11 @@ import BidBoard from './src/screens/TradePartnerScreens/BidBoard';
 import BidDetails from './src/screens/TradePartnerScreens/BidDetails';
 import PlaceBid from './src/screens/TradePartnerScreens/PlaceBid';
 //end of trade partner
+//imports for team members
+import ScheduleAppointment from './src/screens/TeamMemberScreens/ScheduleAppointment';
+import UpdateAppointment from './src/screens/TeamMemberScreens/UpdateAppointment';
+import AppointmentDetails from './src/screens/TeamMemberScreens/AppointmentDetails';
+//end of team member
 //other imports
 export default function App() {
   LogBox.ignoreAllLogs()
@@ -39,7 +44,7 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
-    <EditProfile/>
+    <AppointmentDetails/>
   );
 }
 

@@ -1,4 +1,4 @@
-import { View, Text,Modal,TouchableOpacity,Pressable,Image,StyleSheet,ImageBackground } from 'react-native'
+import { View, Text,Modal,TouchableOpacity,Pressable,Image,StyleSheet,ImageBackground,ScrollResponderEvent } from 'react-native'
 import React from 'react'
 import colors from "../../helpers/colors"
 import fonts from "../../helpers/fonts"
@@ -27,12 +27,14 @@ export default function PlaceBid() {
     <Screen>
     <ScreenHeader screenname='Place a Bid'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
+     <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <OutlinedTextInput changefunc={(e)=>settitle(e)} val={title} lable='Bid Title' placeholder='Bid Title' style={{marginBottom:rp(1.5)}}/>
-            <OutlinedTextInput  changefunc={(e)=>setdesc(e)} val={desc} lable='Bid Description' placeholder='Bid Description' style={{marginBottom:rp(1.5)}}/>
+            <OutlinedTextInput multipleline={true}  changefunc={(e)=>setdesc(e)} val={desc} lable='Bid Description' placeholder='Bid Description' style={{marginBottom:rp(1.5)}}/>
             <OutlinedTextInput  changefunc={(e)=>setamount(e)} val={amount} lable='Bid Amount' placeholder='Bid Amount' style={{marginBottom:rp(1.5)}}/>
     
     </View>
+    </ScrollView>
     <View style={{marginHorizontal:rp(2)}}>
         <SubTitleText text={"Attachments(Optional)"} size='m' style={{marginVertical:rp(2)}}/>
         <Pressable style={{height:rp(30),borderWidth:1,borderRadius:rp(2),borderColor:colors.brown,borderStyle: 'dashed',display:"flex",justifyContent:"center",alignItems:"center"}}>

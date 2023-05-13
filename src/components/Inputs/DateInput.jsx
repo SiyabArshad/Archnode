@@ -6,8 +6,7 @@ import ButtonText from '../Typography/ButtonText'
 import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fontsize";
 import { TextInput,DefaultTheme } from 'react-native-paper';
 
-export default function PasswordInput({lable="Name",placeholder="Your Name",changefunc=()=>{},val="",style}) {
-    const [show,setshow]=React.useState(false)
+export default function DateInput({changefunc=()=>{},val="",style}) {
     const theme = {
         ...DefaultTheme,
         colors: {
@@ -20,16 +19,15 @@ export default function PasswordInput({lable="Name",placeholder="Your Name",chan
     return (
         <TextInput 
         outlineColor={colors.brown}
-        onChangeText={(e)=>changefunc(e)}
           value={val}
         theme={theme}
   mode="outlined"
-  label={lable}
-  placeholder={placeholder}
-  secureTextEntry={!show}
-
+  label={"Date"}
+  placeholder={"Date"} 
     style={{width:"90%",fontFamily:fonts.mregular,backgroundColor:colors.white,color: colors.brown,...style}}
-    right={<TextInput.Icon color={colors.lightblack} onPress={()=>setshow(!show)} icon={show?"eye-off":"eye"} />}
+    right={<TextInput.Icon onPress={()=>{
+      changefunc()
+    }}  icon={"calendar-month"} />}
 />
   )
 }

@@ -6,30 +6,26 @@ import ButtonText from '../Typography/ButtonText'
 import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fontsize";
 import { TextInput,DefaultTheme } from 'react-native-paper';
 
-export default function PasswordInput({lable="Name",placeholder="Your Name",changefunc=()=>{},val="",style}) {
-    const [show,setshow]=React.useState(false)
+export default function TimeInput({label="Time",placeholder="Time",changefunc=()=>{},val="",style}) {
     const theme = {
         ...DefaultTheme,
         colors: {
           ...DefaultTheme.colors,
           primary:colors.brown,
-          text: colors.black, // Color of the input text
+          text: colors.black,
         },
       };
 
     return (
         <TextInput 
         outlineColor={colors.brown}
-        onChangeText={(e)=>changefunc(e)}
           value={val}
         theme={theme}
   mode="outlined"
-  label={lable}
-  placeholder={placeholder}
-  secureTextEntry={!show}
-
-    style={{width:"90%",fontFamily:fonts.mregular,backgroundColor:colors.white,color: colors.brown,...style}}
-    right={<TextInput.Icon color={colors.lightblack} onPress={()=>setshow(!show)} icon={show?"eye-off":"eye"} />}
+  label={label}
+  placeholder={placeholder} 
+    style={{width:"44%",fontFamily:fonts.mregular,backgroundColor:colors.white,color: colors.brown,...style}}
+    right={<TextInput.Icon onPress={changefunc}  icon={"clock-time-four-outline"} />}
 />
   )
 }

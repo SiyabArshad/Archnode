@@ -5,7 +5,7 @@ import Feather from "react-native-vector-icons/Feather"
 import SubTitle from './Typography/Subtitle'
 import CaptionText from './Typography/CaptionText'
 import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fontsize";
-export default function ScreenHeader({backfunc=()=>{},screenname="Screen Name",bidstatus="Open",bidscreen=false}) {
+export default function ScreenHeader({backfunc=()=>{},screenname="Screen Name",bidstatus="Open",bidscreen=false,children}) {
   return (
     <View style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginTop:rp(1),paddingHorizontal:rp(2)}}>
         <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
@@ -20,6 +20,9 @@ export default function ScreenHeader({backfunc=()=>{},screenname="Screen Name",b
             </View>
             }
         </View>
+        {
+          children
+        }
     </View>
   )
 }
