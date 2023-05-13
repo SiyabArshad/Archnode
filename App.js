@@ -10,6 +10,16 @@ import OnBoarding from "./src/screens/OnBoardingScreens/OnBoarding"
 import SignupScreen from './src/screens/authScreens/Signup';
 import SigninScreen from './src/screens/authScreens/SignIn';
 import ForgotPasswordScreen from './src/screens/authScreens/ForgotPassword';
+import Profile from './src/screens/ProfileScreens/Profile';
+import EditProfile from './src/screens/ProfileScreens/EditProfile';
+import ChangePassword from './src/screens/ProfileScreens/ChangePassword';
+//imports of trade partner particular
+import CompanyOffers from './src/screens/TradePartnerScreens/CompanyOffers';
+import OfferDetails from './src/screens/TradePartnerScreens/OfferDetails';
+import BidBoard from './src/screens/TradePartnerScreens/BidBoard';
+import BidDetails from './src/screens/TradePartnerScreens/BidDetails';
+import PlaceBid from './src/screens/TradePartnerScreens/PlaceBid';
+//end of trade partner
 //other imports
 export default function App() {
   LogBox.ignoreAllLogs()
@@ -29,7 +39,7 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
-    <ForgotPasswordScreen/>
+    <EditProfile/>
   );
 }
 

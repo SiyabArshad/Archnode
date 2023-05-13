@@ -24,7 +24,7 @@ export default function OutlinedTextInput({lable="Name",placeholder="Your Name",
   mode="outlined"
   label={lable}
   placeholder={placeholder}
-    style={{width:"90%",fontFamily:fonts.mregular,color: colors.brown,...style}}
+    style={{width:"90%",fontFamily:fonts.mregular,backgroundColor:colors.white,color: colors.brown,...style}}
 />
   )
 }

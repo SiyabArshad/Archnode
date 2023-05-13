@@ -28,7 +28,7 @@ export default function PasswordInput({lable="Name",placeholder="Your Name",chan
   placeholder={placeholder}
   secureTextEntry={!show}
 
-    style={{width:"90%",fontFamily:fonts.mregular,color: colors.brown,...style}}
+    style={{width:"90%",fontFamily:fonts.mregular,backgroundColor:colors.white,color: colors.brown,...style}}
     right={<TextInput.Icon onPress={()=>setshow(!show)} icon={show?"eye-off":"eye"} />}
 />
   )
