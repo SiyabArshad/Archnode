@@ -14,7 +14,7 @@ export default function AppointmentList() {
       <ScrollView showsVerticalScrollIndicator={false}>
             {
                 appts.map((item,i)=>(
-            <View style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
+            <Pressable style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
             <View style={{display:"flex",alignItems:"center"}}>
                 <CaptionText style={{fontSize:rp(2.5)}} text={item.time} color={colors.lightblack}/>
                 <View style={{width:2,borderRadius:rp(1),height:"100%",backgroundColor:colors.lightgrey}}/>
@@ -37,7 +37,7 @@ export default function AppointmentList() {
                     }
 {/* end card */}
             </View>
-        </View>
+        </Pressable>
                 ))
             }
       </ScrollView>

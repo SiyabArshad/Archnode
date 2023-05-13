@@ -10,7 +10,7 @@ export default function ScreenHeader({backfunc=()=>{},screenname="Screen Name",b
     <View style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginTop:rp(1),paddingHorizontal:rp(2)}}>
         <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
             <TouchableOpacity onPress={backfunc}>
-            <Feather name="chevron-left" size={24} color={colors.lightblack} />
+            <Feather name="chevron-left" size={28} color={colors.lightblack} />
             </TouchableOpacity>
             <CaptionText text={screenname}  color={colors.black} style={{marginLeft:rp(2),fontSize:rp(2.6)}}/>
             {

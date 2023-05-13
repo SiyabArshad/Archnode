@@ -4,7 +4,7 @@ import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fonts
 import colors from '../helpers/colors';
 import fonts from '../helpers/fonts';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
-export default function SearchBox({changefunc=()=>{},val="",style}) {
+export default function SearchBox({placeholder="Search",changefunc=()=>{},val="",style}) {
 
 
   return (
@@ -27,7 +27,7 @@ export default function SearchBox({changefunc=()=>{},val="",style}) {
     >
         <MaterialCommunityIcons name="magnify" color={colors.lightblack} size={24} />
 <TextInput
-placeholder='Search'
+placeholder={placeholder}
 onChangeText={(e)=>changefunc(e)}
 value={val}
 placeholderTextColor={colors.lightblack}
