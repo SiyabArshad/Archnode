@@ -24,7 +24,12 @@ import PlaceBid from './src/screens/TradePartnerScreens/PlaceBid';
 import ScheduleAppointment from './src/screens/TeamMemberScreens/ScheduleAppointment';
 import UpdateAppointment from './src/screens/TeamMemberScreens/UpdateAppointment';
 import AppointmentDetails from './src/screens/TeamMemberScreens/AppointmentDetails';
+import Appointments from './src/screens/TeamMemberScreens/Appointments';
 //end of team member
+
+//home owner imports
+import ReferProject from './src/screens/HomeOwnerScreens/ReferProject';
+//end of home owner imports
 //other imports
 export default function App() {
   LogBox.ignoreAllLogs()
@@ -44,7 +49,7 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
-    <AppointmentDetails/>
+    <PlaceBid/>
   );
 }
 

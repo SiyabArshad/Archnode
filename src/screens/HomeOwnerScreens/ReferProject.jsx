@@ -1,4 +1,4 @@
-import { View, Text,Modal,TouchableOpacity,Pressable,Image,StyleSheet,ImageBackground,ScrollView } from 'react-native'
+import { View, Text,Modal,TouchableOpacity,Pressable,Image,StyleSheet,ImageBackground,ScrollResponderEvent,ScrollView } from 'react-native'
 import React from 'react'
 import colors from "../../helpers/colors"
 import fonts from "../../helpers/fonts"
@@ -19,24 +19,21 @@ import { Avatar } from 'react-native-elements'
 import AppHeader from '../../components/AppHeader'
 import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
-export default function PlaceBid() {
+export default function ReferProject() {
     const [title, settitle] = React.useState('');
     const [desc,setdesc]=React.useState("")
-    const [amount,setamount]=React.useState(0)
   return (
     <Screen>
-    <ScreenHeader screenname='Place a Bid'/>
+    <ScreenHeader screenname='Refer Project'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
      <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
-            <OutlinedTextInput changefunc={(e)=>settitle(e)} val={title} lable='Bid Title' placeholder='Bid Title' style={{marginBottom:rp(1.5)}}/>
-            <OutlinedTextInput multipleline={true}  changefunc={(e)=>setdesc(e)} val={desc} lable='Bid Description' placeholder='Bid Description' style={{marginBottom:rp(1.5)}}/>
-            <OutlinedTextInput  changefunc={(e)=>setamount(e)} val={amount} lable='Bid Amount' placeholder='Bid Amount' style={{marginBottom:rp(1.5)}}/>
-    
+            <OutlinedTextInput changefunc={(e)=>settitle(e)} val={title} lable='Project Title' placeholder='Project Title' style={{marginBottom:rp(1.5)}}/>
+            <OutlinedTextInput multipleline={true}  changefunc={(e)=>setdesc(e)} val={desc} lable='Project Description' placeholder='Project Description' style={{marginBottom:rp(1.5)}}/>
     </View>
  
     <View style={{marginHorizontal:rp(2)}}>
-        <SubTitleText text={"Attachments(Optional)"} size='m' style={{marginVertical:rp(2)}}/>
+        <SubTitleText text={"Project Attachments"} size='m' style={{marginVertical:rp(2)}}/>
         <Pressable style={{height:rp(30),borderWidth:1,borderRadius:rp(2),borderColor:colors.brown,borderStyle: 'dashed',display:"flex",justifyContent:"center",alignItems:"center"}}>
         <AntIcon name="cloudupload" size={40} color={colors.lightblack} />
                <View style={{display:"flex",flexDirection:"row",marginTop:rp(2)}}>
@@ -59,7 +56,7 @@ shadowRadius: 4.59,
 elevation: 5
 }}
 >
-     <ButtonFilled text={"Place Bid"} style={{borderRadius:rp(5),marginVertical:rp(2)}} textstyle={{textTransform:"capitalize"}}/>
+     <ButtonFilled text={"Send"} style={{borderRadius:rp(5),marginVertical:rp(2)}} textstyle={{textTransform:"capitalize"}}/>
      <ButtonOutline text={"Cancel"} style={{borderRadius:rp(5),marginBottom:rp(2)}}/>
 </View>
 </View>
