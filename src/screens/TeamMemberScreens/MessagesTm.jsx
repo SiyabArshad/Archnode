@@ -38,7 +38,7 @@ export default function MessagesTm() {
     <ScrollView showsVerticalScrollIndicator={false}>
     {
         [1,2,3,4,5,6,7,8,9,9].map((item,i)=>(
-            <View style={{marginHorizontal:rp(2),marginBottom:rp(3)}}>
+            <View key={i} style={{marginHorizontal:rp(2),marginBottom:rp(3)}}>
             <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:rp(2)}}>
                 <View style={{display:"flex",flexDirection:"row"}}>
                 <Avatar size="medium" source={require("../../../assets/images/user.png")}/>
