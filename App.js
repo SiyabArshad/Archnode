@@ -27,6 +27,7 @@ import AppointmentDetails from './src/screens/TeamMemberScreens/AppointmentDetai
 import Appointments from './src/screens/TeamMemberScreens/Appointments';
 import MessagesTm from './src/screens/TeamMemberScreens/MessagesTm';
 import InboxTm from './src/screens/TeamMemberScreens/InboxTm';
+import GroupRequests from './src/screens/TeamMemberScreens/GroupRequests';
 //end of team member
 //home owner imports
 import ReferProject from './src/screens/HomeOwnerScreens/ReferProject';
@@ -37,6 +38,7 @@ import SharePhoto from './src/screens/HomeOwnerScreens/SharePhoto';
 import CreateGroup from './src/screens/HomeOwnerScreens/CreateGroup';
 import EditGroup from './src/screens/HomeOwnerScreens/EditGroup';
 import GroupDetails from './src/screens/HomeOwnerScreens/GroupDetails';
+import InviteMember from './src/screens/HomeOwnerScreens/InviteMember';
 //end of home owner imports
 //other imports
 export default function App() {

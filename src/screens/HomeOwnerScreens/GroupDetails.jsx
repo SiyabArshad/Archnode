@@ -28,17 +28,27 @@ import { Divider } from 'react-native-paper'
 import EvilIcons from "react-native-vector-icons/EvilIcons"
 import UploadModal from '../../components/Photos/UploadModal'
 import Member from '../../components/Members/Member'
+import ImageViewer from '../../components/Photos/ImageViewer'
 export default function GroupDetails() {
     const[tab,settab]=React.useState(0)
+
     const[uploadOpen,setuploadOpen]=React.useState(false)
+    const[iamgeviewwerOpen,setiamgeviewwerOpen]=React.useState(false)
     const uploadclose=()=>{
         setuploadOpen(false)
     }
     const uploadopenfunc=()=>{
         setuploadOpen(true)
     }
+    const openimv=()=>{
+      setiamgeviewwerOpen(true)
+  }
+  const closeimv=()=>{
+      setiamgeviewwerOpen(false)
+  }
   return (
     <Screen>
+      <ImageViewer visible={iamgeviewwerOpen} closemdoal={closeimv}/>
         <UploadModal closemodal={uploadclose} show={uploadOpen}/>
     <ScreenHeader screenname='Group XYZ'>        
        <TouchableOpacity>
@@ -61,6 +71,8 @@ export default function GroupDetails() {
             [1,2,,3,4,5,65,7,8,9,9,3].map((item,i)=>{
                 return(
                     <Image
+                    key={i}
+                    onPress={openimv}
                     source={require("../../../assets/images/dummyimage.png")}
                     style={{ width: Dimensions.get("screen").width/3.2, height: 150,marginRight:rp(1),marginBottom:rp(1) }}
                     PlaceholderContent={<ActivityIndicator />}
