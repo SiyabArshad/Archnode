@@ -32,7 +32,7 @@ export default function MessagesTm() {
     <Screen>
     <AppHeader screenname='Message'/>
     <View style={{marginVertical:rp(3),display:"flex",flexDirection:"row",alignItems:"center",marginHorizontal:rp(2)}}>
-       <Avatar  size="medium" source={require("../../../assets/images/user.png")}/> 
+       <Avatar rounded  size="medium" source={require("../../../assets/images/user.png")}/> 
     <SearchBox placeholder='Search a new Chat' val={search} changefunc={(e)=>setsearch(e)} style={{width:"84%",backgroundColor:colors.lightgrey,borderWidth:0,paddingVertical:rp(2),borderRadius:rp(4)}}/>
     </View>
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -41,7 +41,7 @@ export default function MessagesTm() {
             <View key={i} style={{marginHorizontal:rp(2),marginBottom:rp(3)}}>
             <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:rp(2)}}>
                 <View style={{display:"flex",flexDirection:"row"}}>
-                <Avatar size="medium" source={require("../../../assets/images/user.png")}/>
+                <Avatar rounded size="medium" source={require("../../../assets/images/user.png")}/>
                 <View style={{marginLeft:rp(2)}}>
                     <SubTitleText text={"Christin Arc"} size='m'/>
                     <View style={{display:"flex",flexDirection:"row"}}>

@@ -39,7 +39,7 @@ export default function InboxTm() {
             <Feather name="chevron-left" size={30} color={colors.lightblack} />
             </TouchableOpacity>
             <View style={{marginLeft:rp(2),display:"flex",flexDirection:"row",alignItems:"center"}}>
-                <Avatar size={"small"} source={require("../../../assets/images/user.png")}/>
+                <Avatar rounded size={"small"} source={require("../../../assets/images/user.png")}/>
                 <CaptionText text={"Christin Arc"} style={{marginLeft:rp(1),fontSize:rp(2.5)}}/>
                 <View style={{marginLeft:rp(1),backgroundColor:colors.vlightgreen,paddingHorizontal:rp(1.3),paddingVertical:rp(.7),borderRadius:rp(1)}}>
                     <CaptionText color={colors.green}  text={"Internal"}/>

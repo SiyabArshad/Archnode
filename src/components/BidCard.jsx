@@ -24,7 +24,7 @@ elevation: 2
     }}>
       <View style={{display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between",marginVertical:rp(2)}}>
             <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-            <Avatar  size={"small"} source={require("../../assets/images/user.png")}/>
+            <Avatar rounded size={"small"} source={require("../../assets/images/user.png")}/>
             <View style={{marginLeft:rp(1)}}>
                 <CaptionText  text={"Lina Moretti"}/>
                 <CaptionText color={colors.lightblack} text={"Placed on 12 Jan 2020"}/>    

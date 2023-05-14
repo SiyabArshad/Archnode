@@ -28,7 +28,7 @@ export default function EditProfile() {
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <View style={{borderWidth:1,borderColor:colors.brown,marginBottom:rp(2),padding:rp(.5),display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%"}}>
-            <Avatar  size={"medium"} source={require("../../../assets/images/user.png")}/>
+            <Avatar rounded size={"medium"} source={require("../../../assets/images/user.png")}/>
             </View> 
             <OutlinedTextInput changefunc={(e)=>setname(e)} val={name} lable='Full Name' placeholder='Full Name' style={{marginBottom:rp(1.5)}}/>
             <OutlinedTextInput  changefunc={(e)=>setemail(e)} val={email} lable='Email' placeholder='Email' style={{marginBottom:rp(1.5)}}/>

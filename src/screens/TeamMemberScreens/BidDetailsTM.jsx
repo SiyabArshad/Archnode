@@ -54,7 +54,7 @@ export default function BidDetailsTM() {
                     <View>
                     <CaptionText text={"Owner"} color={colors.black} style={{marginVertical:rp(2),fontSize:rp(2)}}/>
                     <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                    <Avatar  size={"small"} source={require("../../../assets/images/user.png")}/>
+                    <Avatar rounded size={"small"} source={require("../../../assets/images/user.png")}/>
                     <CaptionText text={"Christin Arc"} color={colors.lightblack} style={{marginLeft:rp(1),fontSize:rp(2.2)}}/>
                     </View>
                   </View>

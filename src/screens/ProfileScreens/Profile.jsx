@@ -25,7 +25,7 @@ export default function Profile() {
     <View style={{height:rp(4),width:"95%",backgroundColor:colors.lightbrown,marginHorizontal:"2.5%",borderTopRightRadius:rp(1.7),borderTopLeftRadius:rp(1.7),marginTop:rp(4),marginBottom:rp(2)}}/>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:rp(3)}}>
             <View style={{borderWidth:1,borderColor:colors.brown,marginBottom:rp(.4),padding:rp(.5),display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%"}}>
-            <Avatar  size={"medium"} source={require("../../../assets/images/user.png")}/>
+            <Avatar rounded size={"medium"} source={require("../../../assets/images/user.png")}/>
             </View>
             <SubTitleText text={"Jean Carla"} size='m'  color={colors.lightblack} style={{marginVertical:rp(1)}}/>
             <Pressable style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
