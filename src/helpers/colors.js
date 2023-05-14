@@ -12,7 +12,9 @@ const colors={
     navybluelight:"#DEEEF8",
     green:"#00B53A",
     vlightgreen:"rgba(0, 181, 58, 0.12)",
+    lightgreen2:"rgba(0, 181, 58, 0.56)",
     lightgreen1:"#BAE9B2",
-    danger:"#C63733"
+    danger:"#C63733",
+    grey:"#D9D9D9"
 }
 export default colors

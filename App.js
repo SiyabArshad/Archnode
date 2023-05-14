@@ -31,6 +31,12 @@ import InboxTm from './src/screens/TeamMemberScreens/InboxTm';
 //home owner imports
 import ReferProject from './src/screens/HomeOwnerScreens/ReferProject';
 import MessageOwner from './src/screens/HomeOwnerScreens/MessageOwner';
+import Projects from './src/screens/HomeOwnerScreens/Projects';
+import ProjectDetails from './src/screens/HomeOwnerScreens/ProjectDetails';
+import SharePhoto from './src/screens/HomeOwnerScreens/SharePhoto';
+import CreateGroup from './src/screens/HomeOwnerScreens/CreateGroup';
+import EditGroup from './src/screens/HomeOwnerScreens/EditGroup';
+import GroupDetails from './src/screens/HomeOwnerScreens/GroupDetails';
 //end of home owner imports
 //other imports
 export default function App() {
@@ -51,7 +57,7 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
-    <MessageOwner/>
+    <GroupDetails/>
   );
 }
 

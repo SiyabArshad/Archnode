@@ -47,7 +47,7 @@ export default function InboxOwner() {
             </View>
         </View>
         <TouchableOpacity >
-        <EntypoIcon name="dots-three-vertical" size={22} color={colors.lightblack} />
+        <Feather name="more-vertical" size={24} color={colors.lightblack}/>
         </TouchableOpacity>
     </View>
     <ChatBox/>
