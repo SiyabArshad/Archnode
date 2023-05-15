@@ -25,7 +25,7 @@ export default function EditProfile({navigation,route}) {
     const [name,setname]=React.useState("")
   return (
     <Screen>
-    <ScreenHeader screenname='Edit Profile'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Edit Profile'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <View style={{borderWidth:1,borderColor:colors.brown,marginBottom:rp(2),padding:rp(.5),display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%"}}>

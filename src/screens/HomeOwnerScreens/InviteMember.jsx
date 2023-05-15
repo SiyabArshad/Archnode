@@ -26,10 +26,10 @@ export default function InviteMember({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>
-    <ScreenHeader screenname='Invite Members'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Invite Members'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
      <SearchBox val={search} changefunc={(e)=>setsearch(e)} style={{marginVertical:rp(2),borderWidth:0,backgroundColor:colors.lightgrey}} placeholder='Search People'/>
-    <View style={{flex:1,paddingBottom:rp(5),paddingHorizontal:rp(2)}}>
+    <View style={{flex:1,paddingBottom:rp(1),paddingHorizontal:rp(2)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
         {
             [1,2,3,4,5,6,7,8,9,10].map((item,i)=>(

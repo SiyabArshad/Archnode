@@ -25,7 +25,7 @@ export default function EditGroup({navigation,route}) {
    
   return (
     <Screen>
-    <ScreenHeader screenname='Edit Group'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Edit Group'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <OutlinedTextInput changefunc={(e)=>setname(e)} val={name} lable='Group Name' placeholder='Group Name' style={{marginBottom:rp(1.5)}}/>

@@ -30,20 +30,21 @@ import ChatBox from '../../components/Chat/ChatBox'
 import Feather from "react-native-vector-icons/Feather"
 import ScreenNames from '../../helpers/routes'
 export default function InboxOwner({navigation,route}) {
+    const {type}=route.params
   return (
     <Screen>
     <View style={{flex:1,marginHorizontal:rp(2),display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
     <View style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginTop:rp(1)
 }}>
         <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-            <TouchableOpacity >
+            <TouchableOpacity onPress={()=>navigation.pop()}>
             <Feather name="chevron-left" size={30} color={colors.lightblack} />
             </TouchableOpacity>
             <View style={{marginLeft:rp(2),display:"flex",flexDirection:"row",alignItems:"center"}}>
                 <Avatar rounded size={"small"} source={require("../../../assets/images/user.png")}/>
                 <CaptionText text={"Christin Arc"} style={{marginLeft:rp(1),fontSize:rp(2.5)}}/>
-                <View style={{marginLeft:rp(1),backgroundColor:colors.vlightgreen,paddingHorizontal:rp(1.3),paddingVertical:rp(.7),borderRadius:rp(1)}}>
-                    <CaptionText color={colors.green}  text={"Internal"}/>
+                <View style={{marginLeft:rp(1),backgroundColor:type==='Internal'?colors.vlightgreen:colors.navybluelight,paddingHorizontal:rp(1.3),paddingVertical:rp(.7),borderRadius:rp(1)}}>
+                    <CaptionText color={type==="Internal"?colors.green:colors.navyblue}  text={type}/>
                 </View>
             </View>
         </View>

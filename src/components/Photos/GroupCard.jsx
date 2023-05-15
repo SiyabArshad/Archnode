@@ -8,10 +8,10 @@ import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fonts
 import { LinearProgress } from 'react-native-elements'
 import { Divider,Badge, ProgressBar, MD3Colors,Avatar} from 'react-native-paper'
 import Feather from "react-native-vector-icons/Feather"
-
-export default function GroupCard() {
+import ScreenNames from '../../helpers/routes'
+export default function GroupCard({navigation}) {
   return (
-    <Pressable style={{width:"90%",marginHorizontal:"5%",marginBottom:rp(2),
+    <Pressable onPress={()=>navigation.navigate(ScreenNames.HmGroupDetails)} style={{width:"90%",marginHorizontal:"5%",marginBottom:rp(2),
     borderRadius:rp(1.4),paddingHorizontal:rp(1.8),paddingVertical:rp(1.5),backgroundColor:colors.lightgrey}}>
             <SubTitleText text={"Maintenance Group"}  style={{fontSize:rp(2.3)}}/>
             <View style={{marginVertical:rp(2),display:"flex",flexDirection:"row",alignItems:"center"}}>

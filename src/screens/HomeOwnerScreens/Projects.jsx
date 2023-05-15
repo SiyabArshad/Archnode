@@ -36,12 +36,12 @@ export default function Projects({navigation,route}) {
     <Screen>
     <AppHeader screenname='Projects'/>
     <SearchBox val={search} changefunc={(e)=>setsearch(e)} style={{marginVertical:rp(2),borderWidth:0,backgroundColor:colors.lightgrey}} placeholder='Search Projects'/>
-    <View style={{flex:1,paddingBottom:rp(5)}}>
+    <View style={{flex:1,paddingBottom:rp(1)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
         {
             [1,2,3,4,5,6,6].map((item,i)=>{
                 return(
-                   <ProjectCard/>
+                   <ProjectCard navigation={navigation}/>
                 )
             })
         }

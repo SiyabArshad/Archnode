@@ -7,14 +7,14 @@ import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fonts
 import CaptionText from '../Typography/CaptionText'
 import SubTitle from '../Typography/Subtitle'
 import EvilIcons from "react-native-vector-icons/EvilIcons"
-
-export default function AppointmentList() {
+import ScreenNames from '../../helpers/routes'
+export default function AppointmentList({navigation}) {
   return (
     <View style={{flex:1,marginHorizontal:rp(2),marginVertical:rp(2)}}>
       <ScrollView showsVerticalScrollIndicator={false}>
             {
                 appts.map((item,i)=>(
-            <Pressable style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
+            <Pressable onPress={()=>navigation.navigate(ScreenNames.TmAppointmentDetails)} style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
             <View style={{display:"flex",alignItems:"center"}}>
                 <CaptionText style={{fontSize:rp(2.5)}} text={item.time} color={colors.lightblack}/>
                 <View style={{width:2,borderRadius:rp(1),height:"100%",backgroundColor:colors.lightgrey}}/>

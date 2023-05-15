@@ -34,8 +34,8 @@ export default function Appointments({navigation,route}) {
             <AppHeader screenname='Appointments'/>
             <View style={{flex:1}}>
                 <AppointmentDates/>
-                <AppointmentList/>
-                <TouchableOpacity style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:50,right:10}}>
+                <AppointmentList navigation={navigation}/>
+                <TouchableOpacity onPress={()=>navigation.navigate(ScreenNames.TmScheduleAppointments)} style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:20,right:10}}>
                 <AntDesign name="calendar" size={28} color={colors.white} />
                 </TouchableOpacity>
             </View>

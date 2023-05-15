@@ -29,6 +29,7 @@ import ScreenNames from '../../helpers/routes'
 export default function BidBoard({navigation,route}) {
     const[tab,settab]=React.useState(0)
     const[search,setsearch]=React.useState("")
+
   return (
     <Screen>
             <AppHeader screenname='Bid Boards'/>
@@ -49,19 +50,19 @@ export default function BidBoard({navigation,route}) {
                         {
                             tab===0&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <OpenBids key={i}/>
+                                <OpenBids func={()=>navigation.navigate(ScreenNames.TPBidBoardDetails)} key={i}/>
                             ))
                         }
                         {
                             tab===1&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <MyProposal key={i}/>
+                                <MyProposal func={()=>navigation.navigate(ScreenNames.TPBidBoardDetails)} key={i}/>
                             ))
                         }
                         {
                             tab===2&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <AcceptedBid key={i}/>
+                                <AcceptedBid func={()=>navigation.navigate(ScreenNames.TPBidBoardDetails)} key={i}/>
                             ))
                         }
                     </ScrollView>

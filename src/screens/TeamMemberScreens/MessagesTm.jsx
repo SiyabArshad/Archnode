@@ -40,7 +40,7 @@ export default function MessagesTm({navigation,route}) {
     {
         [1,2,3,4,5,6,7,8,9,9].map((item,i)=>(
             <View key={i} style={{marginHorizontal:rp(2),marginBottom:rp(3)}}>
-            <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:rp(2)}}>
+            <Pressable onPress={()=>navigation.navigate(ScreenNames.TmInbox)} style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",marginBottom:rp(2)}}>
                 <View style={{display:"flex",flexDirection:"row"}}>
                 <Avatar rounded size="medium" source={require("../../../assets/images/user.png")}/>
                 <View style={{marginLeft:rp(2)}}>

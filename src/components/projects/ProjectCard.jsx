@@ -8,10 +8,10 @@ import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fonts
 import { LinearProgress } from 'react-native-elements'
 import { Divider,Badge, ProgressBar, MD3Colors,Avatar} from 'react-native-paper'
 import Feather from "react-native-vector-icons/Feather"
-
-export default function ProjectCard() {
+import ScreenNames from '../../helpers/routes'
+export default function ProjectCard({navigation}) {
   return (
-    <Pressable style={{width:"90%",marginHorizontal:"5%",marginBottom:rp(2),borderWidth:1,borderColor:colors.lightgrey,
+    <Pressable onPress={()=>navigation.navigate(ScreenNames.HmProjectDetails)}  style={{width:"90%",marginHorizontal:"5%",marginBottom:rp(2),borderWidth:1,borderColor:colors.lightgrey,
     shadowColor: "#000000",
 shadowOffset: {
 width: 0,

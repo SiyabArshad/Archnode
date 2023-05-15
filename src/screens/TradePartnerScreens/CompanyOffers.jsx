@@ -39,13 +39,13 @@ export default function CompanyOffers({navigation,route}) {
                         {
                             tab===0&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <CompanyOfferscomp key={i}/>
+                                <CompanyOfferscomp navigation={navigation} key={i}/>
                             ))
                         }
                         {
                             tab===1&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <AcceptedOffers key={i}/>
+                                <AcceptedOffers navigation={navigation} key={i}/>
                             ))
                         }
                     </ScrollView>

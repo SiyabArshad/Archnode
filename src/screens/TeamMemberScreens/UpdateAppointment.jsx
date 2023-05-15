@@ -82,7 +82,7 @@ export default function UpdateAppointment({navigation,route}) {
   
   return (
     <Screen>
-    <ScreenHeader screenname='Edit Appointment'/>
+    <ScreenHeader  backfunc={()=>navigation.pop()} screenname='Edit Appointment'/>
     <DateTimePickerModal
         isVisible={isDatePickerVisible}
         mode="date"

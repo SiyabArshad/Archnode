@@ -26,7 +26,7 @@ export default function PlaceBid({navigation,route}) {
     const [amount,setamount]=React.useState(0)
   return (
     <Screen>
-    <ScreenHeader screenname='Place a Bid'/>
+    <ScreenHeader  backfunc={()=>navigation.pop()} screenname='Place a Bid'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
      <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>

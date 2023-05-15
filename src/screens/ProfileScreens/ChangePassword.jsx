@@ -26,7 +26,7 @@ export default function ChangePassword({navigation,route}) {
     const [confirmpassword,setconfirmpassword]=React.useState("")
   return (
     <Screen>
-    <ScreenHeader screenname='Change Password'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Change Password'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <PasswordInput  changefunc={(e)=>setpassword(e)} val={password} lable='Password' placeholder='Password' style={{marginBottom:rp(1.5)}}/>

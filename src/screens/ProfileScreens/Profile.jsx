@@ -29,7 +29,7 @@ export default function Profile({navigation,route}) {
             <Avatar rounded size={"medium"} source={require("../../../assets/images/user.png")}/>
             </View>
             <SubTitleText text={"Jean Carla"} size='m'  color={colors.lightblack} style={{marginVertical:rp(1)}}/>
-            <Pressable style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <Pressable onPress={()=>navigation.navigate(ScreenNames.editProfile)} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
             <FeatherIcon name="edit" size={24} color={colors.brown} />
             </Pressable>
     </View>
@@ -41,8 +41,8 @@ export default function Profile({navigation,route}) {
         <SubTitleText text={"Phone"} size='s' style={{fontSize:rp(2.3),marginTop:rp(1.5)}} color={colors.lightblack}></SubTitleText>
         <CaptionText text={"+894345355"} style={{fontSize:rp(2.3),marginVertical:rp(1.2)}} />
      </View>
-     <ButtonOutline text={"Change Password"} style={{borderRadius:rp(5)}}/>
-     <ButtonFilled text={"Refer Project"} style={{borderRadius:rp(5),marginTop:rp(2)}} textstyle={{textTransform:"capitalize"}}/>
+     <ButtonOutline func={()=>navigation.navigate(ScreenNames.changePassword)} text={"Change Password"} style={{borderRadius:rp(5)}}/>
+     <ButtonFilled func={()=>navigation.navigate(ScreenNames.HmReferProject)} text={"Refer Project"} style={{borderRadius:rp(5),marginTop:rp(2)}} textstyle={{textTransform:"capitalize"}}/>
      </View>
  </Screen>
   )

@@ -39,8 +39,8 @@ export default function ProjectDetails({navigation,route}) {
     const[tab,settab]=React.useState(0)
   return (
     <Screen>
-    <ScreenHeader screenname='Projects Detail'/>
-    <View style={{flex:1,paddingBottom:rp(5),marginTop:rp(2),paddingHorizontal:rp(2)}}>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Projects Detail'/>
+    <View style={{flex:1,paddingBottom:rp(1),marginTop:rp(2),paddingHorizontal:rp(2)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
             <SubTitleText text={"Construction of Tiny Home"} size='m' style={{marginVertical:rp(1.5)}}/>
         <ProjectProgress/>  

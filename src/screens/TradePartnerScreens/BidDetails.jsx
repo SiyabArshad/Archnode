@@ -27,7 +27,7 @@ export default function BidDetails({navigation,route}) {
   const[tab,settab]=React.useState(0)
   return (
     <Screen>
-    <ScreenHeader screenname='Bid Details' bidstatus='Open' bidscreen={true}/>
+    <ScreenHeader  backfunc={()=>navigation.pop()} screenname='Bid Details' bidstatus='Open' bidscreen={true}/>
     <View style={{flex:1}}>
             <ScrollView  showsVerticalScrollIndicator={false}>
                 <SubTitleText text={"App Patent Idea: Social Network"}  size='m' style={{marginVertical:rp(2),marginLeft:rp(2)}}/>
@@ -63,7 +63,7 @@ export default function BidDetails({navigation,route}) {
                     </View>
                  </View>
 
-                <ButtonFilled text={"Place Bid"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"Capitalize"}}/>
+                <ButtonFilled func={()=>navigation.navigate(ScreenNames.TpPlaceBid)} text={"Place Bid"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"Capitalize"}}/>
                <View style={{marginVertical:rp(1),display:"flex",flexDirection:"row",alignItems:"center",marginHorizontal:rp(2)}}>
                 
                <Pressable onPress={()=>settab(0)} style={{paddingVertical:rp(1.2),paddingHorizontal:rp(1.5),borderRadius:rp(.7),backgroundColor:tab===0?colors.lightbrown:colors.lightgrey,marginRight:rp(1.3)}}>

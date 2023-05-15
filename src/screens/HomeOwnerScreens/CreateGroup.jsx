@@ -25,7 +25,7 @@ export default function CreateGroup({navigation,route}) {
    
   return (
     <Screen>
-    <ScreenHeader screenname='Create Group'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Create Group'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
             <OutlinedTextInput changefunc={(e)=>setname(e)} val={name} lable='Group Name' placeholder='Group Name' style={{marginBottom:rp(1.5)}}/>

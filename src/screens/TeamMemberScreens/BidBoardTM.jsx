@@ -49,19 +49,19 @@ export default function BidBoardTM({navigation,route}) {
                         {
                             tab===0&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <OpenBids key={i}/>
+                                <OpenBids func={()=>navigation.navigate(ScreenNames.TmBidBoardDetails)} key={i}/>
                             ))
                         }
                         {
                             tab===1&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <MyProposal key={i}/>
+                                <MyProposal func={()=>navigation.navigate(ScreenNames.TmBidBoardDetails)} key={i}/>
                             ))
                         }
                         {
                             tab===2&&
                             [1,2,3,4,5].map((item,i)=>(
-                                <AcceptedBid key={i}/>
+                                <AcceptedBid func={()=>navigation.navigate(ScreenNames.TmBidBoardDetails)} key={i}/>
                             ))
                         }
                     </ScrollView>

@@ -36,18 +36,18 @@ export default function SharePhoto({navigation,route}) {
     <Screen>
     <AppHeader screenname='Share Photos'/>
     <SearchBox val={search} changefunc={(e)=>setsearch(e)} style={{marginVertical:rp(2),borderWidth:0,backgroundColor:colors.lightgrey}} placeholder='Search Groups'/>
-    <View style={{flex:1,paddingBottom:rp(5)}}>
+    <View style={{flex:1,paddingBottom:rp(1)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
         {
             [1,2,3,4,5,6,6].map((item,i)=>{
                 return(
-                   <GroupCard/>
+                   <GroupCard navigation={navigation}/>
                 )
             })
         }
         </ScrollView>
     </View>
-    <TouchableOpacity style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:50,right:10}}>
+    <TouchableOpacity onPress={()=>navigation.navigate(ScreenNames.HmCreateGroup)} style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:20,right:10}}>
     <Feather name="plus" size={24} color={colors.white} />
                 </TouchableOpacity>
     </Screen>

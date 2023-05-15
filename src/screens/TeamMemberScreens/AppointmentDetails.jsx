@@ -31,8 +31,8 @@ export default function AppointmentDetails({navigation,route}) {
   
   return (
     <Screen>
-    <ScreenHeader screenname='Appointment'>
-       <TouchableOpacity>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Appointment'>
+       <TouchableOpacity onPress={()=>navigation.navigate(ScreenNames.TmUpdateAppointments)}>
             <FeatherIcon color={colors.lightblack} size={24} name='edit'/>
        </TouchableOpacity>
     </ScreenHeader>

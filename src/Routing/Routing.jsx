@@ -36,7 +36,7 @@ import TmBidDetail from "../screens/TeamMemberScreens/BidDetailsTM"
 //home owner imports
 import ReferProject from '../screens/HomeOwnerScreens/ReferProject';
 import MessageOwner from '../screens/HomeOwnerScreens/MessageOwner';
-import InboxOwner from "../screens/HomeOwnerScreens/CreateGroup"
+import InboxOwner from "../screens/HomeOwnerScreens/InboxOwner"
 import Projects from '../screens/HomeOwnerScreens/Projects';
 import ProjectDetails from '../screens/HomeOwnerScreens/ProjectDetails';
 import SharePhoto from '../screens/HomeOwnerScreens/SharePhoto';

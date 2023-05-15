@@ -25,7 +25,7 @@ export default function ReferProject({navigation,route}) {
     const [desc,setdesc]=React.useState("")
   return (
     <Screen>
-    <ScreenHeader screenname='Refer Project'/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Refer Project'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
      <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>

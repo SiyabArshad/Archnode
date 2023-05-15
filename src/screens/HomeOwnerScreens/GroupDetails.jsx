@@ -51,8 +51,8 @@ export default function GroupDetails({navigation,route}) {
     <Screen>
       <ImageViewer visible={iamgeviewwerOpen} closemdoal={closeimv}/>
         <UploadModal closemodal={uploadclose} show={uploadOpen}/>
-    <ScreenHeader screenname='Group XYZ'>        
-       <TouchableOpacity>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Group XYZ'>        
+       <TouchableOpacity onPress={()=>navigation.navigate(ScreenNames.HmEditGroup)}>
             <FeatherIcon color={colors.lightblack} size={24} name='edit'/>
        </TouchableOpacity>
     </ScreenHeader>
@@ -94,12 +94,12 @@ export default function GroupDetails({navigation,route}) {
                }
     </ScrollView>
   {
-    tab===0&&  <TouchableOpacity onPress={uploadopenfunc} style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:50,right:10}}>
+    tab===0&&  <TouchableOpacity onPress={uploadopenfunc} style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:20,right:10}}>
     <EvilIcons name="image" size={32} color={colors.white} />
     </TouchableOpacity>
   }
   {
-    tab===1&&  <TouchableOpacity  style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:50,right:10}}>
+    tab===1&&  <TouchableOpacity  onPress={()=>navigation.navigate(ScreenNames.HmInviteMember)} style={{backgroundColor:colors.brown,position:"absolute",width:60,height:60,borderRadius:30,display:"flex",alignItems:"center",justifyContent:"center",bottom:20,right:10}}>
     <FeatherIcon name="user-plus" size={24} color={colors.white}/>
     </TouchableOpacity>
   }

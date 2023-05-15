@@ -8,10 +8,10 @@ import CaptionText from './Typography/CaptionText'
 import { RFPercentage as rp, RFValue as rf } from "react-native-responsive-fontsize";
 import BodyText from './Typography/BodyText'
 import Heading from './Typography/Heading'
-
-export default function OpenBids({item}) {
+import ScreenNames from '../helpers/routes'
+export default function OpenBids({item,navigation,func=()=>{}}) {
   return (
-    <Pressable style={{width:"95%",marginHorizontal:"2.5%",marginBottom:rp(2),backgroundColor:colors.lightgrey,paddingHorizontal:rp(2),paddingVertical:rp(1.5),borderRadius:rp(1)}}>
+    <Pressable onPress={func} style={{width:"95%",marginHorizontal:"2.5%",marginBottom:rp(2),backgroundColor:colors.lightgrey,paddingHorizontal:rp(2),paddingVertical:rp(1.5),borderRadius:rp(1)}}>
         <View style={{display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
            <View style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
            <CaptionText color={colors.darkBrown} text={"7 Days "}/>

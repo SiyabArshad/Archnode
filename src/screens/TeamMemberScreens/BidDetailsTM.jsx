@@ -27,7 +27,7 @@ export default function BidDetailsTM({navigation,route}) {
   const[tab,settab]=React.useState(0)
   return (
     <Screen>
-    <ScreenHeader screenname='Bid Details' bidstatus='Open' bidscreen={true}/>
+    <ScreenHeader backfunc={()=>navigation.pop()} screenname='Bid Details' bidstatus='Open' bidscreen={true}/>
     <View style={{flex:1}}>
             <ScrollView  showsVerticalScrollIndicator={false}>
                 <SubTitleText text={"App Patent Idea: Social Network"}  size='m' style={{marginVertical:rp(2),marginLeft:rp(2)}}/>
