@@ -13,7 +13,8 @@ import ButtonFilled from '../../components/buttons/ButtonFilled'
 import ButtonOutline from '../../components/buttons/ButtonOutline'
 import BodyText from "../../components/Typography/BodyText"
 import LableText from "../../components/Typography/LableText"
-export default function OnBoarding() {
+import ScreenNames from '../../helpers/routes'
+export default function OnBoarding({navigation,route}) {
   const [index,setindex]=React.useState(0)
   const onboarddata=[
     {
@@ -37,8 +38,8 @@ export default function OnBoarding() {
     }
     if(index===2)
     {
-      //navigate to roles screens
-      setindex(0)
+      navigation.navigate(ScreenNames.rolesScreen)
+      // setindex(0)
     }
   }
   return (
@@ -56,7 +57,7 @@ export default function OnBoarding() {
           <View style={{borderWidth:index!=2&&1,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===2?colors.brown:colors.white,marginRight:rp(1)}}/>
         </View>
      <ButtonFilled func={indexFunc} text={"Next"} style={{marginBottom:rp(1.5)}}/>
-     <ButtonOutline text={"Skip"}/>
+     <ButtonOutline func={()=>navigation.navigate(ScreenNames.rolesScreen)} text={"Skip"}/>
   </View>
     </ImageBackground>
 </Screen>

@@ -34,7 +34,8 @@ import ProjectDetailsBox from '../../components/projects/ProjectDetailsBox'
 import MaterialIcon from "react-native-vector-icons/MaterialIcons"
 import Member from '../../components/Members/Member'
 import ProjectStages from '../../components/projects/ProjectStages'
-export default function ProjectDetails() {
+import ScreenNames from '../../helpers/routes'
+export default function ProjectDetails({navigation,route}) {
     const[tab,settab]=React.useState(0)
   return (
     <Screen>

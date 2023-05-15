@@ -21,8 +21,8 @@ import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import AcceptedOffers from '../../components/AcceptedOffers'
 import CompanyOfferscomp from '../../components/CompanyOfferscomp'
-
-export default function OfferDetails() {
+import ScreenNames from '../../helpers/routes'
+export default function OfferDetails({navigation,route}) {
   return (
     <Screen>
     <ScreenHeader screenname='Bid Details' bidstatus='Open' bidscreen={true}/>

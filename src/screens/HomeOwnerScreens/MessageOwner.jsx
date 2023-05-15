@@ -26,7 +26,8 @@ import formatDate from '../../helpers/dateFormat'
 import formatTime from '../../helpers/formatTime'
 import { Divider,Badge } from 'react-native-paper'
 import SearchBox from '../../components/SearchBox'
-export default function MessageOwner() {
+import ScreenNames from '../../helpers/routes'
+export default function MessageOwner({navigation,route}) {
     const[search,setsearch]=React.useState("")
     const[tab,settab]=React.useState(0)
   return (

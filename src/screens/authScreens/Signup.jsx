@@ -16,7 +16,8 @@ import ButtonFilled from "../../components/buttons/ButtonFilled"
 import { TextInput,DefaultTheme } from 'react-native-paper';
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import PasswordInput from '../../components/Inputs/PasswordInput'
-export default function SignupScreen() {
+import ScreenNames from '../../helpers/routes'
+export default function SignupScreen({navigation,route}) {
     const [email, setemail] = React.useState('');
     const [name,setname]=React.useState("")
     const [password,setpassword]=React.useState("")
@@ -35,7 +36,7 @@ export default function SignupScreen() {
             <ButtonFilled text={"Sign Up"} style={{marginVertical:rp(3)}} textstyle={{
         textTransform:"capitalize"}}/>
         <View style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                <Pressable onPress={()=>navigation.pop()} style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
                     <SubtitleText size='s'  text={"Already have an account?"} color={colors.lightblack} style={{fontSize:rp(2.3),marginRight:rp(1)}}/>
                     <SubtitleText size='s'  text={"Sign in"} color={colors.brown} style={{fontSize:rp(2.3)}}/>
                 </Pressable>

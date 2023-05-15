@@ -24,7 +24,8 @@ import TimeInput from '../../components/Inputs/TimeInput'
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import formatDate from '../../helpers/dateFormat'
 import formatTime from '../../helpers/formatTime'
-export default function ScheduleAppointment() {
+import ScreenNames from '../../helpers/routes'
+export default function ScheduleAppointment({navigation,route}) {
     const [title, settitle] = React.useState('');
     const [notes,setnotes]=React.useState("")
     const [location,setlocation]=React.useState("")

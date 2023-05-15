@@ -27,7 +27,8 @@ import formatTime from '../../helpers/formatTime'
 import { Divider } from 'react-native-paper'
 import AppointmentList from '../../components/Appointments/AppointmentList'
 import AppointmentDates from '../../components/Appointments/AppointmentDates'
-export default function Appointments() {
+import ScreenNames from '../../helpers/routes'
+export default function Appointments({navigation,route}) {
   return (
         <Screen>
             <AppHeader screenname='Appointments'/>

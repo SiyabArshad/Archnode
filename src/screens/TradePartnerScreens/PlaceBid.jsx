@@ -19,7 +19,8 @@ import { Avatar } from 'react-native-elements'
 import AppHeader from '../../components/AppHeader'
 import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
-export default function PlaceBid() {
+import ScreenNames from '../../helpers/routes'
+export default function PlaceBid({navigation,route}) {
     const [title, settitle] = React.useState('');
     const [desc,setdesc]=React.useState("")
     const [amount,setamount]=React.useState(0)

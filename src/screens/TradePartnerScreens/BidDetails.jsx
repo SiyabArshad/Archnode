@@ -22,7 +22,8 @@ import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import AcceptedOffers from '../../components/AcceptedOffers'
 import CompanyOfferscomp from '../../components/CompanyOfferscomp'
 import BidCard from '../../components/BidCard'
-export default function BidDetails() {
+import ScreenNames from '../../helpers/routes'
+export default function BidDetails({navigation,route}) {
   const[tab,settab]=React.useState(0)
   return (
     <Screen>

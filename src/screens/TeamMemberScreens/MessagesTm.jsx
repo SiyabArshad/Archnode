@@ -26,7 +26,8 @@ import formatDate from '../../helpers/dateFormat'
 import formatTime from '../../helpers/formatTime'
 import { Divider,Badge } from 'react-native-paper'
 import SearchBox from '../../components/SearchBox'
-export default function MessagesTm() {
+import ScreenNames from '../../helpers/routes'
+export default function MessagesTm({navigation,route}) {
     const[search,setsearch]=React.useState("")
   return (
     <Screen>

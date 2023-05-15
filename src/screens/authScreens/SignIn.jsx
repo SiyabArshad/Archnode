@@ -17,10 +17,27 @@ import { TextInput,DefaultTheme} from 'react-native-paper';
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import PasswordInput from '../../components/Inputs/PasswordInput'
 import { CheckBox } from 'react-native-elements'
-export default function SigninScreen() {
+import ScreenNames from '../../helpers/routes'
+export default function SigninScreen({navigation,route}) {
+    const{role}=route.params
+    console.log(role)
     const [email, setemail] = React.useState('');
     const [password,setpassword]=React.useState("")
     const [remember, setremember] = React.useState(false);
+    const LoginFunc=()=>{
+      if(role==="homeowner")
+      {
+        navigation.navigate(ScreenNames.Hmbottomtab)
+      }
+      else if(role==='tradepartner')
+      {
+        navigation.navigate(ScreenNames.Tpbottomtab)
+      }
+      else
+      {
+        navigation.navigate(ScreenNames.Tmbottomtab)
+      }
+    }
  return (
 <Screen>
     <ImageBackground  source={require("../../../assets/images/Onboarding.png")} style={{flex:1}}>
@@ -46,14 +63,14 @@ export default function SigninScreen() {
 
                 <CaptionText text={"Remember me"}/>
                 </View>
-                <Pressable style={{marginRight:rp(2)}}>
+                <Pressable onPress={()=>navigation.navigate(ScreenNames.forgotScreen)} style={{marginRight:rp(2)}}>
                     <ButonText text={"Forgot Password?"} color={colors.brown}/>
                 </Pressable>
               </View>
-              <ButtonFilled text={"Sign In"} style={{marginVertical:rp(3)}} textstyle={{
+              <ButtonFilled func={()=>LoginFunc()} text={"Sign In"} style={{marginVertical:rp(3)}} textstyle={{
         textTransform:"capitalize"}}/>
         <View style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                <Pressable onPress={()=>navigation.navigate(ScreenNames.signupScreen)} style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
                     <SubtitleText size='s'  text={"Don't have an account?"} color={colors.lightblack} style={{fontSize:rp(2.3),marginRight:rp(1)}}/>
                     <SubtitleText size='s'  text={"Sign Up"} color={colors.brown} style={{fontSize:rp(2.3)}}/>
                 </Pressable>

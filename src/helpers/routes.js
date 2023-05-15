@@ -31,4 +31,9 @@ const ScreenNames={
     TpPlaceBid:"PlaceBidScreen",
     TPBidBoard:"tPBidBoardScreen",
     TPBidBoardDetails:"tPBidBoardDetailsScreen",
+    Hmbottomtab:"HomeBottomTab",
+    Tpbottomtab:"TradeBottomTab",
+    Tmbottomtab:"TeamBottomTab",
 }
+
+export default ScreenNames

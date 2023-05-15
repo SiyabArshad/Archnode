@@ -19,7 +19,8 @@ import { Avatar } from 'react-native-elements'
 import AppHeader from '../../components/AppHeader'
 import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
-export default function CreateGroup() {
+import ScreenNames from '../../helpers/routes'
+export default function CreateGroup({navigation,route}) {
     const [name, setname] = React.useState('');
    
   return (

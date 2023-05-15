@@ -29,7 +29,8 @@ import EvilIcons from "react-native-vector-icons/EvilIcons"
 import UploadModal from '../../components/Photos/UploadModal'
 import Member from '../../components/Members/Member'
 import ImageViewer from '../../components/Photos/ImageViewer'
-export default function GroupDetails() {
+import ScreenNames from '../../helpers/routes'
+export default function GroupDetails({navigation,route}) {
     const[tab,settab]=React.useState(0)
 
     const[uploadOpen,setuploadOpen]=React.useState(false)

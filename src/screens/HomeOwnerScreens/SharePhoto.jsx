@@ -29,7 +29,8 @@ import SearchBox from '../../components/SearchBox'
 import ChatBox from '../../components/Chat/ChatBox'
 import Feather from "react-native-vector-icons/Feather"
 import GroupCard from '../../components/Photos/GroupCard'
-export default function SharePhoto() {
+import ScreenNames from '../../helpers/routes'
+export default function SharePhoto({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>

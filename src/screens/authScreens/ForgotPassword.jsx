@@ -17,7 +17,8 @@ import { TextInput,DefaultTheme} from 'react-native-paper';
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import PasswordInput from '../../components/Inputs/PasswordInput'
 import { CheckBox } from 'react-native-elements'
-export default function ForgotPasswordScreen() {
+import ScreenNames from '../../helpers/routes'
+export default function ForgotPasswordScreen({navigation,route}) {
     const [email, setemail] = React.useState('');
  return (
 <Screen>
@@ -30,7 +31,7 @@ export default function ForgotPasswordScreen() {
               <ButtonFilled text={"Send Reset Link"} style={{marginVertical:rp(3)}} textstyle={{
         textTransform:"capitalize"}}/>
         <View style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <Pressable style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
+                <Pressable onPress={()=>navigation.pop()} style={{display:"flex",flexDirection:"row",justifyContent:"center"}}>
                     <SubtitleText size='s'  text={"Return to"} color={colors.lightblack} style={{fontSize:rp(2.3),marginRight:rp(1)}}/>
                     <SubtitleText size='s'  text={"Sign In"} color={colors.brown} style={{fontSize:rp(2.3)}}/>
                 </Pressable>

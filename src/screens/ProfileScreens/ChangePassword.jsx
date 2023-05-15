@@ -20,7 +20,8 @@ import AppHeader from '../../components/AppHeader'
 import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import PasswordInput from '../../components/Inputs/PasswordInput'
-export default function ChangePassword() {
+import ScreenNames from '../../helpers/routes'
+export default function ChangePassword({navigation,route}) {
     const [password,setpassword]=React.useState("")
     const [confirmpassword,setconfirmpassword]=React.useState("")
   return (

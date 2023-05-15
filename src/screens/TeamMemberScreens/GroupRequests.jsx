@@ -21,8 +21,8 @@ import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import SearchBox from '../../components/SearchBox'
 import MemberCard from '../../components/Members/MemberCard'
-
-export default function GroupRequests() {
+import ScreenNames from '../../helpers/routes'
+export default function GroupRequests({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>

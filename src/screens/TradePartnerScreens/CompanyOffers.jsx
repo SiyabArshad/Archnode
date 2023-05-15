@@ -21,7 +21,7 @@ import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
 import AcceptedOffers from '../../components/AcceptedOffers'
 import CompanyOfferscomp from '../../components/CompanyOfferscomp'
-export default function CompanyOffers() {
+export default function CompanyOffers({navigation,route}) {
     const[tab,settab]=React.useState(0)
   return (
     <Screen>

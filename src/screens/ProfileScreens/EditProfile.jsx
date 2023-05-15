@@ -19,7 +19,8 @@ import { Avatar } from 'react-native-elements'
 import AppHeader from '../../components/AppHeader'
 import ScreenHeader from "../../components/ScreenHeader"
 import OutlinedTextInput from '../../components/Inputs/OutlinedTextInput'
-export default function EditProfile() {
+import ScreenNames from '../../helpers/routes'
+export default function EditProfile({navigation,route}) {
     const [email, setemail] = React.useState('');
     const [name,setname]=React.useState("")
   return (

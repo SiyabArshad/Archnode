@@ -25,7 +25,8 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import formatDate from '../../helpers/dateFormat'
 import formatTime from '../../helpers/formatTime'
 import { Divider } from 'react-native-paper'
-export default function AppointmentDetails() {
+import ScreenNames from '../../helpers/routes'
+export default function AppointmentDetails({navigation,route}) {
 
   
   return (

@@ -25,7 +25,8 @@ import OpenBids from '../../components/OpenBids'
 import AcceptedBid from "../../components/AcceptedBid"
 import MyProposal from '../../components/MyProposal'
 import SearchBox from '../../components/SearchBox'
-export default function BidBoardTM() {
+import ScreenNames from '../../helpers/routes'
+export default function BidBoardTM({navigation,route}) {
     const[tab,settab]=React.useState(0)
     const[search,setsearch]=React.useState("")
   return (

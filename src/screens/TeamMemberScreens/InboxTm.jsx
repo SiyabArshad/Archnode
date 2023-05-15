@@ -28,7 +28,8 @@ import { Divider,Badge} from 'react-native-paper'
 import SearchBox from '../../components/SearchBox'
 import ChatBox from '../../components/Chat/ChatBox'
 import Feather from "react-native-vector-icons/Feather"
-export default function InboxTm() {
+import ScreenNames from '../../helpers/routes'
+export default function InboxTm({navigation,route}) {
   return (
     <Screen>
     <View style={{flex:1,marginHorizontal:rp(2),display:"flex",flexDirection:"column",justifyContent:"space-between"}}>

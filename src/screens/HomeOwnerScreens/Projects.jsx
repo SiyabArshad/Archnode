@@ -29,7 +29,8 @@ import SearchBox from '../../components/SearchBox'
 import ChatBox from '../../components/Chat/ChatBox'
 import Feather from "react-native-vector-icons/Feather"
 import ProjectCard from '../../components/projects/ProjectCard'
-export default function Projects() {
+import ScreenNames from '../../helpers/routes'
+export default function Projects({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>

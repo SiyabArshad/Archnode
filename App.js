@@ -41,6 +41,8 @@ import GroupDetails from './src/screens/HomeOwnerScreens/GroupDetails';
 import InviteMember from './src/screens/HomeOwnerScreens/InviteMember';
 //end of home owner imports
 //other imports
+import Routing from './src/Routing/Routing';
+
 export default function App() {
   LogBox.ignoreAllLogs()
   const [fontsLoaded, error] = Font.useFonts({
@@ -59,7 +61,7 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
-    <GroupDetails/>
+    <Routing/>
   );
 }
 

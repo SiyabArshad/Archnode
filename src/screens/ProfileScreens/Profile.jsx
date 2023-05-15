@@ -17,7 +17,8 @@ import BodyText from "../../components/Typography/BodyText"
 import LableText from "../../components/Typography/LableText"
 import { Avatar } from 'react-native-elements'
 import AppHeader from '../../components/AppHeader'
-export default function Profile() {
+import ScreenNames from '../../helpers/routes'
+export default function Profile({navigation,route}) {
   return (
  <Screen>
     <AppHeader screenname='Profile Details'/>
