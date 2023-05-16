@@ -52,9 +52,9 @@ export default function OnBoarding({navigation,route}) {
       </View>
   <View style={{width:"100%"}}>
   <View style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",marginVertical:rp(3)}}>
-          <View style={{borderWidth:index!=0&&1,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===0?colors.brown:colors.white,marginRight:rp(1)}}/>
-          <View style={{borderWidth:index!=1&&1,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===1?colors.brown:colors.white,marginRight:rp(1)}}/>
-          <View style={{borderWidth:index!=2&&1,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===2?colors.brown:colors.white,marginRight:rp(1)}}/>
+          <View style={{borderWidth:index!=0?1:0,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===0?colors.brown:colors.white,marginRight:rp(1)}}/>
+          <View style={{borderWidth:index!=1?1:0,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===1?colors.brown:colors.white,marginRight:rp(1)}}/>
+          <View style={{borderWidth:index!=2?1:0,borderColor:colors.lightblack, height:12,width:12,borderRadius:6,backgroundColor:index===2?colors.brown:colors.white,marginRight:rp(1)}}/>
         </View>
      <ButtonFilled func={indexFunc} text={"Next"} style={{marginBottom:rp(1.5)}}/>
      <ButtonOutline func={()=>navigation.navigate(ScreenNames.rolesScreen)} text={"Skip"}/>

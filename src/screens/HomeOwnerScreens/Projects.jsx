@@ -41,7 +41,7 @@ export default function Projects({navigation,route}) {
         {
             [1,2,3,4,5,6,6].map((item,i)=>{
                 return(
-                   <ProjectCard navigation={navigation}/>
+                   <ProjectCard key={i} navigation={navigation}/>
                 )
             })
         }

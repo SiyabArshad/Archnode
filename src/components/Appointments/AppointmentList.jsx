@@ -14,7 +14,7 @@ export default function AppointmentList({navigation}) {
       <ScrollView showsVerticalScrollIndicator={false}>
             {
                 appts.map((item,i)=>(
-            <Pressable onPress={()=>navigation.navigate(ScreenNames.TmAppointmentDetails)} style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
+            <Pressable key={i} onPress={()=>navigation.navigate(ScreenNames.TmAppointmentDetails)} style={{flex:1,display:"flex",flexDirection:"row",justifyContent:"space-between",width:"100%",marginBottom:rp(3)}}>
             <View style={{display:"flex",alignItems:"center"}}>
                 <CaptionText style={{fontSize:rp(2.5)}} text={item.time} color={colors.lightblack}/>
                 <View style={{width:2,borderRadius:rp(1),height:"100%",backgroundColor:colors.lightgrey}}/>

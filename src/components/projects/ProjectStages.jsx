@@ -9,7 +9,6 @@ import { LinearProgress } from 'react-native-elements'
 import { Divider,Badge, ProgressBar, MD3Colors,Avatar} from 'react-native-paper'
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Heading from '../Typography/Heading'
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 export default function ProjectStages() {
   return (

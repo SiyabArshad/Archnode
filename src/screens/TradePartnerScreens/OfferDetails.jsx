@@ -52,7 +52,7 @@ export default function OfferDetails({navigation,route}) {
                   </View>
                 
                 </View>
-                <ButtonFilled text={"Accept Offer"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"Capitalize"}}/>
+                <ButtonFilled text={"Accept Offer"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"capitalize"}}/>
                 <View style={{marginHorizontal:rp(2)}}>
                   <SubTitleText text={"Descriptions"} size='m' style={{marginBottom:rp(2)}}/>
                   <BodyText color={colors.lightblack} text={`Do you have an original Social App idea that does not exist? We are searching for an original idea for a Patent.

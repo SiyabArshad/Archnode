@@ -63,7 +63,7 @@ export default function BidDetails({navigation,route}) {
                     </View>
                  </View>
 
-                <ButtonFilled func={()=>navigation.navigate(ScreenNames.TpPlaceBid)} text={"Place Bid"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"Capitalize"}}/>
+                <ButtonFilled func={()=>navigation.navigate(ScreenNames.TpPlaceBid)} text={"Place Bid"} style={{marginVertical:rp(3),borderRadius:rp(5)}} textstyle={{textTransform:"capitalize"}}/>
                <View style={{marginVertical:rp(1),display:"flex",flexDirection:"row",alignItems:"center",marginHorizontal:rp(2)}}>
                 
                <Pressable onPress={()=>settab(0)} style={{paddingVertical:rp(1.2),paddingHorizontal:rp(1.5),borderRadius:rp(.7),backgroundColor:tab===0?colors.lightbrown:colors.lightgrey,marginRight:rp(1.3)}}>
