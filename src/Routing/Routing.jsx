@@ -45,11 +45,9 @@ import EditGroup from '../screens/HomeOwnerScreens/EditGroup';
 import GroupDetails from '../screens/HomeOwnerScreens/GroupDetails';
 import InviteMember from '../screens/HomeOwnerScreens/InviteMember';
 //emd screen imports
-//bottom tabs
-import HmBottomTab from './HmBottomTab';
-import TpBottomTab from './TpBottomTab';
 import TmBottomTab from './TmBottomTab';
 import HmDrawer from './HmDrawer';
+import TpDrawer from './TpDrawer';
 //end bottom tabs
 export default function Routing() {
   return (
@@ -80,7 +78,7 @@ export default function Routing() {
             <Stack.Screen name={ScreenNames.HmInviteMember} component={InviteMember}/>
             <Stack.Screen name={ScreenNames.Hmbottomtab} component={HmDrawer}/>
             <Stack.Screen name={ScreenNames.Tmbottomtab} component={TmBottomTab}/>
-            <Stack.Screen name={ScreenNames.Tpbottomtab} component={TpBottomTab}/>
+            <Stack.Screen name={ScreenNames.Tpbottomtab} component={TpDrawer}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
