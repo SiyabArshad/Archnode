@@ -28,9 +28,9 @@ export default function EditProfile({navigation,route}) {
     <ScreenHeader backfunc={()=>navigation.pop()} screenname='Edit Profile'/>
      <View style={{flex:1,justifyContent:"space-between"}}>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginTop:rp(4)}}>
-            <View style={{borderWidth:1,borderColor:colors.brown,marginBottom:rp(2),padding:rp(.5),display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%"}}>
+            <View style={{borderWidth:1,borderColor:colors.brown,marginBottom:rp(.4),padding:rp(.5),display:"flex",justifyContent:"center",alignItems:"center",height:60,width:60,borderRadius:30}}>
             <Avatar rounded size={"medium"} source={require("../../../assets/images/user.png")}/>
-            </View> 
+            </View>
             <OutlinedTextInput changefunc={(e)=>setname(e)} val={name} lable='Full Name' placeholder='Full Name' style={{marginBottom:rp(1.5)}}/>
             <OutlinedTextInput  changefunc={(e)=>setemail(e)} val={email} lable='Email' placeholder='Email' style={{marginBottom:rp(1.5)}}/>
     </View>
