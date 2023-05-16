@@ -25,7 +25,7 @@ export default function CompanyOffers({navigation,route}) {
     const[tab,settab]=React.useState(0)
   return (
     <Screen>
-            <AppHeader screenname='Offers'/>
+            <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Offers'/>
             <View style={{marginTop:rp(3),marginBottom:rp(3),display:"flex",flexDirection:"row",alignItems:"center",paddingHorizontal:rp(2)}}>
                 <Pressable onPress={()=>settab(0)} style={{paddingVertical:rp(1.2),paddingHorizontal:rp(1.5),borderRadius:rp(.7),backgroundColor:tab===0?colors.lightbrown:colors.lightgrey,marginRight:rp(1.3)}}>
                     <BodyText text={"Offers"} color={tab===0?colors.darkBrown:colors.lightblack}/>

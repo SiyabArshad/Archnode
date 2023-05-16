@@ -34,7 +34,7 @@ export default function Projects({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>
-    <AppHeader screenname='Projects'/>
+    <AppHeader drawerfunc={() => navigation.openDrawer()}  screenname='Projects'/>
     <SearchBox val={search} changefunc={(e)=>setsearch(e)} style={{marginVertical:rp(2),borderWidth:0,backgroundColor:colors.lightgrey}} placeholder='Search Projects'/>
     <View style={{flex:1,paddingBottom:rp(1)}}>
         <ScrollView showsVerticalScrollIndicator={false}>

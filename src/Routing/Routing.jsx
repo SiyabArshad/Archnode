@@ -49,6 +49,7 @@ import InviteMember from '../screens/HomeOwnerScreens/InviteMember';
 import HmBottomTab from './HmBottomTab';
 import TpBottomTab from './TpBottomTab';
 import TmBottomTab from './TmBottomTab';
+import HmDrawer from './HmDrawer';
 //end bottom tabs
 export default function Routing() {
   return (
@@ -77,7 +78,7 @@ export default function Routing() {
             <Stack.Screen name={ScreenNames.HmEditGroup} component={EditGroup}/>
             <Stack.Screen name={ScreenNames.HmGroupDetails} component={GroupDetails}/>
             <Stack.Screen name={ScreenNames.HmInviteMember} component={InviteMember}/>
-            <Stack.Screen name={ScreenNames.Hmbottomtab} component={HmBottomTab}/>
+            <Stack.Screen name={ScreenNames.Hmbottomtab} component={HmDrawer}/>
             <Stack.Screen name={ScreenNames.Tmbottomtab} component={TmBottomTab}/>
             <Stack.Screen name={ScreenNames.Tpbottomtab} component={TpBottomTab}/>
         </Stack.Navigator>

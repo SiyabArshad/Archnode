@@ -32,7 +32,7 @@ export default function MessageOwner({navigation,route}) {
     const[tab,settab]=React.useState(0)
   return (
     <Screen>
-    <AppHeader screenname='Message'/>
+    <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Message'/>
     <View style={{marginHorizontal:rp(2),marginTop:rp(2),display:"flex",flexDirection:"row"}}>
     <Pressable onPress={()=>settab(0)} style={{paddingVertical:rp(1.2),paddingHorizontal:rp(1.5),borderRadius:rp(.7),backgroundColor:tab===0?colors.lightbrown:colors.lightgrey,marginRight:rp(1.3)}}>
                     <BodyText text={"Internal"} color={tab===0?colors.darkBrown:colors.lightblack}/>

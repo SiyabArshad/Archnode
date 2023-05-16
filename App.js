@@ -42,6 +42,7 @@ import InviteMember from './src/screens/HomeOwnerScreens/InviteMember';
 //end of home owner imports
 //other imports
 import Routing from './src/Routing/Routing';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 export default function App() {
   LogBox.ignoreAllLogs()
@@ -61,7 +62,9 @@ export default function App() {
     return <Loading visible={true}/>
   }
   return (
+    <PaperProvider>
     <Routing/>
+    </PaperProvider>
   );
 }
 
@@ -73,3 +76,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+

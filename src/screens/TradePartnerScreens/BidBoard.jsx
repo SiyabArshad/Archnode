@@ -32,7 +32,7 @@ export default function BidBoard({navigation,route}) {
 
   return (
     <Screen>
-            <AppHeader screenname='Bid Boards'/>
+            <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Bid Boards'/>
             <View style={{marginTop:rp(3),marginBottom:rp(2),display:"flex",flexDirection:"row",alignItems:"center",paddingHorizontal:rp(2)}}>
                 <Pressable onPress={()=>settab(0)} style={{paddingVertical:rp(1.2),paddingHorizontal:rp(1.5),borderRadius:rp(.7),backgroundColor:tab===0?colors.lightbrown:colors.lightgrey,marginRight:rp(1.3)}}>
                     <BodyText text={"Boards"} color={tab===0?colors.darkBrown:colors.lightblack}/>

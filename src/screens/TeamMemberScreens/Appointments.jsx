@@ -31,7 +31,7 @@ import ScreenNames from '../../helpers/routes'
 export default function Appointments({navigation,route}) {
   return (
         <Screen>
-            <AppHeader screenname='Appointments'/>
+            <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Appointments'/>
             <View style={{flex:1}}>
                 <AppointmentDates/>
                 <AppointmentList navigation={navigation}/>

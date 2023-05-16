@@ -21,7 +21,7 @@ import ScreenNames from '../../helpers/routes'
 export default function Profile({navigation,route}) {
   return (
  <Screen>
-    <AppHeader screenname='Profile Details'/>
+    <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Profile Details'/>
     <View style={{flex:1}}>
     <View style={{height:rp(4),width:"95%",backgroundColor:colors.lightbrown,marginHorizontal:"2.5%",borderTopRightRadius:rp(1.7),borderTopLeftRadius:rp(1.7),marginTop:rp(4),marginBottom:rp(2)}}/>
     <View style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:rp(3)}}>

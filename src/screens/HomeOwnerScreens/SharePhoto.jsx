@@ -34,7 +34,7 @@ export default function SharePhoto({navigation,route}) {
     const [search,setsearch]=React.useState("")
   return (
     <Screen>
-    <AppHeader screenname='Share Photos'/>
+    <AppHeader drawerfunc={() => navigation.openDrawer()} screenname='Share Photos'/>
     <SearchBox val={search} changefunc={(e)=>setsearch(e)} style={{marginVertical:rp(2),borderWidth:0,backgroundColor:colors.lightgrey}} placeholder='Search Groups'/>
     <View style={{flex:1,paddingBottom:rp(1)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
