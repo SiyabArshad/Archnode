@@ -57,7 +57,7 @@ export default function InboxOwner({navigation,route}) {
         <Pressable style={{width:"10%"}}>
         <EvilIcons name="image" size={40} color={colors.lightblack} />
         </Pressable>
-        <TextInput style={{borderWidth:1,borderColor:colors.lightblack,borderRadius:rp(5),paddingHorizontal:rp(2),paddingVertical:rp(2),width:"80%",marginHorizontal:rp(1)}} placeholder='Your Message'/>
+        <TextInput style={{borderWidth:1,borderColor:colors.lightblack,borderRadius:rp(5),paddingHorizontal:rp(2),paddingVertical:rp(1.2),width:"80%",marginHorizontal:rp(1)}} placeholder='Your Message'/>
         <Pressable style={{width:"10%"}}>
         <Ionicons name="md-send" size={26} color={colors.darkBrown} />
         </Pressable>

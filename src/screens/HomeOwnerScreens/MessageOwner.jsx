@@ -44,7 +44,7 @@ export default function MessageOwner({navigation,route}) {
     </View>
     <View style={{marginVertical:rp(3),display:"flex",flexDirection:"row",alignItems:"center",marginHorizontal:rp(2)}}>
        <Avatar rounded size="medium" source={require("../../../assets/images/user.png")}/> 
-    <SearchBox placeholder='Search a new Chat' val={search} changefunc={(e)=>setsearch(e)} style={{width:"84%",backgroundColor:colors.lightgrey,borderWidth:0,paddingVertical:rp(2),borderRadius:rp(4)}}/>
+    <SearchBox placeholder='Search a new Chat' val={search} changefunc={(e)=>setsearch(e)} style={{width:"84%",backgroundColor:colors.lightgrey,borderWidth:0,paddingVertical:rp(1),borderRadius:rp(4)}}/>
     </View>
     {
         tab===0&&
